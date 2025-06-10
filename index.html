@@ -115,33 +115,7 @@
         </tbody>
     </table>
 
-    <script>
-        document.getElementById('registrationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const dob = document.getElementById('dob').value;
-            const acceptedTerms = document.getElementById('acceptTerms').checked;
-            
-            // Format the date as YYYY-MM-DD
-            const formattedDob = dob;
-            
-            // Add new row to the table
-            const tableBody = document.querySelector('#entriesTable tbody');
-            const newRow = tableBody.insertRow();
-            
-            newRow.insertCell(0).textContent = name;
-            newRow.insertCell(1).textContent = email;
-            newRow.insertCell(2).textContent = password;
-            newRow.insertCell(3).textContent = formattedDob;
-            newRow.insertCell(4).textContent = acceptedTerms ? 'true' : 'false';
-            
-            // Reset the form
-            this.reset();
-        });
+    <script src="index.js">
     </script>
 </body>
 </html>
